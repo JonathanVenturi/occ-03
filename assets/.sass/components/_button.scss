@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as *;
+
+.button {
+    color: #FFF;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 50px;
+    width: fit-content;
+    border-radius: 25px;
+    padding: 0 20px;
+
+    background:linear-gradient($gradient-color, $primary-color);
+
+
+}

@@ -1,0 +1,104 @@
+@use "../abstracts/variables" as *;
+
+
+.capsule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.capsule-block {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.capsule {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    border-radius: 15px;
+    background-color: #FFF;
+    filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.15));
+
+
+    .capsule-content {
+        display: flex;
+        flex: 1 1 auto;
+        margin: 15px;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+
+        .capsule-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .title {
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .capsule-side {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+    }
+
+
+    .capsule-tick {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -60px;
+        min-width: 60px;
+        height: 70px;
+        background-color: $accent-color;
+        color: #FFF;
+        font-size: 1.2rem;
+        transition: 0.5s;
+    }
+
+}
+
+
+.capsule:hover .capsule-tick {
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+.capsule-number {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    color: #FFF;
+    background-color: $primary-color;
+    border-radius: 12px;
+    border: #FFF;
+
+}
+
+
+
+
+.menu-section .capsule {
+    background-color: #FFF;
+    justify-content: space-between;
+}

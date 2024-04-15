@@ -1,0 +1,383 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+.title {
+  font-size: 1.125rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+
+.logo-font {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: normal;
+}
+
+.menu-section-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 3px solid;
+  border-color: #99E2D0;
+  max-width: 60px;
+}
+
+i.pad-right {
+  padding-right: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F6F6F6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.button {
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 25px;
+  padding: 0 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+.capsule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.capsule-block {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.capsule {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
+  max-width: 768px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #FFF;
+  filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.15));
+}
+.capsule .capsule-content {
+  display: flex;
+  flex: 1 1 auto;
+  margin: 15px;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.capsule .capsule-content .capsule-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.capsule .capsule-content .capsule-text .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.capsule .capsule-content .capsule-side {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.capsule .capsule-tick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -60px;
+  min-width: 60px;
+  height: 70px;
+  background-color: #99E2D0;
+  color: #FFF;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+.capsule:hover .capsule-tick {
+  margin-right: 0;
+}
+
+.capsule-number {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  color: #FFF;
+  background-color: #9356DC;
+  border-radius: 12px;
+  border: #FFF;
+}
+
+.menu-section .capsule {
+  background-color: #FFF;
+  justify-content: space-between;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .card-container {
+    flex-direction: row;
+  }
+}
+
+.card {
+  flex: 1 1 40%;
+  background-color: #FFF;
+  position: relative;
+  max-height: 250px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card .card-badge {
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 2px;
+}
+.card .card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+  height: 175px;
+  width: 100%;
+}
+.card .card-content {
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card .card-content .card-favorite {
+  font-size: 1.6rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1024px;
+  padding: 20px;
+}
+
+.limited {
+  max-width: 768px;
+  padding: 20px 0;
+}
+
+.inset {
+  position: relative;
+  margin-top: -40px;
+  margin-bottom: -20px;
+  border-radius: 40px 40px 0 0;
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.align-left {
+  margin-right: auto;
+}
+
+.splash-picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 275px;
+  width: 100%;
+}
+
+.white {
+  background-color: #FFF;
+}
+
+.main-bg {
+  background-color: #F6F6F6;
+}
+
+.header-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 275px;
+  width: 100%;
+}
+
+.header-title {
+  position: relative;
+  background-color: #F6F6F6;
+  margin-top: -40px;
+  padding: 20px;
+  border-radius: 40px;
+}
+.header-title h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.intro-section {
+  text-align: center;
+}
+.intro-section .title {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+.intro-section .subtitle {
+  font-size: 1rem;
+}
+.intro-section .button {
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .guide-section .capsule-list {
+    flex-direction: row;
+  }
+}
+.guide-section .capsule-block {
+  flex: 1 1 25%;
+}
+.guide-section .capsule {
+  margin-left: 15px;
+  background-color: #F6F6F6;
+}
+
+.page-header {
+  position: relative;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+}
+.page-header .back-button {
+  position: absolute;
+  left: 20px;
+  z-index: 1;
+}
+.page-header .header-logo-img {
+  width: 120px;
+}
+
+.ribbon {
+  width: 100%;
+  height: 50px;
+  background-color: #EAEAEA;
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-container {
+  margin-top: 20px;
+  padding-top: 20px;
+  background-color: #353535;
+  color: #FFF;
+}
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row-reverse;
+  }
+}
+.footer-container .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .footer-container .footer-content {
+    flex-direction: row-reverse;
+    gap: 50px;
+  }
+}
+.footer-container .title {
+  align-items: center;
+  justify-content: center;
+}
+.footer-container .link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 768px) {
+  .footer-container .link-list {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.footer-container .list-item {
+  margin-bottom: 0.5rem;
+}

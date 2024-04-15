@@ -1,0 +1,141 @@
+@use "../abstracts/variables" as *;
+
+
+
+
+.full-width {
+    width: 100%;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    padding: 20px;
+}
+
+.limited {
+    max-width: 768px;
+    padding: 20px 0;
+}
+
+
+
+.inset {
+    position: relative;
+    margin-top: -40px;
+    margin-bottom: -20px;
+    border-radius: 40px 40px 0 0;
+}
+
+
+
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    gap: 50px;
+}
+
+
+
+
+
+
+.align-left {
+    margin-right: auto;
+}
+
+
+.splash-picture {
+    object-fit: cover;
+    max-height: 275px;
+    width: 100%;
+}
+
+
+
+
+
+.white {
+    background-color: #FFF;
+}
+
+.main-bg {
+    background-color: $background-color;
+ 
+}
+
+
+
+.header-img {
+    object-fit: cover;
+    max-height: 275px;
+    width: 100%;
+}
+
+.header-title {
+    position: relative;
+    background-color: $background-color;
+    margin-top: -40px;
+    padding: 20px;
+    border-radius: 40px;
+
+    h1 {
+        font-size: 1.75rem;
+        margin: 0;
+    }
+
+}
+
+
+
+.intro-section {
+
+    text-align: center;
+
+    .title {
+        font-size: 1.5rem;
+        margin: 20px 0;        
+    }
+
+    .subtitle {
+        font-size: 1rem;
+
+    }
+
+    .button {
+        margin: 20px;
+    }
+
+}
+
+.guide-section {
+
+    .capsule-list {
+        @media(min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+
+    .capsule-block {
+        flex: 1 1 25%;
+    }
+
+    .capsule {
+        margin-left: 15px;
+        background-color: $background-color;
+
+    }
+
+}

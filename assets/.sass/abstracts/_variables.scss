@@ -1,8 +1,11 @@
 // Colors
+@use 'sass:color';
 
 $background-color: #F6F6F6;
 $primary-color: #9356DC;
+$primary-light: lighten($primary-color, 15%);
 $gradient-color: #FF79DA;
+$gradient-light: lighten($gradient-color, 15%);
 
 $accent-color: #99E2D0;
 

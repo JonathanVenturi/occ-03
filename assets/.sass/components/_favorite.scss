@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+
+.card-favorite {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+
+  font-weight: 900;
+  font-size: 1.6rem;
+
+  transition: 1s;
+
+  i {
+      position: absolute;
+  }
+
+  i.fa-solid {
+      background-image: linear-gradient( $gradient-color, $primary-color);
+      background-clip: text;
+      color: transparent;
+      max-height: 0;
+      max-width: 0;
+      transition: 1s;
+  }
+}
+
+.card-favorite:hover {
+  i.fa-solid {
+      max-height: 2rem;
+      max-width: 2rem;
+  }
+}

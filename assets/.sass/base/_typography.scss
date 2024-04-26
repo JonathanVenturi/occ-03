@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as *;
+@use "../abstracts/color" as *;
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -23,6 +23,10 @@ h3 {
 .logo-font {
     font-family: 'Shrikhand', sans-serif;
     font-weight: normal;
+}
+
+.section-title {
+    padding: 20px 0;
 }
 
 .menu-section-title {

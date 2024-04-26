@@ -1,18 +1,20 @@
 @charset "UTF-8";
 
-@use "abstracts/variables";
-
-@use 'base/typography';
+@use "abstracts/color";
 
 @use "base/reset";
+@use 'base/typography';
 
+@use 'components/blocks';
+@use 'components/ribbon';
 @use 'components/button';
-@use 'components/capsule';
 @use 'components/card';
 @use 'components/favorite';
 @use 'components/loader';
 
-@use 'layout/blocks';
 @use 'layout/header';
-@use 'layout/ribbon';
+@use 'layout/intro';
+@use 'layout/guide';
+@use 'layout/restaurants';
+@use 'layout/menu';
 @use 'layout/footer';

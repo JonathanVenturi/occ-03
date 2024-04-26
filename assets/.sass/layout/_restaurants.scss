@@ -1,0 +1,5 @@
+@use "../abstracts/color";
+
+.restaurant-section {
+    background-color: color.$background-color;
+}

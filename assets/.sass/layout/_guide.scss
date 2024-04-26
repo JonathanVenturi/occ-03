@@ -1,0 +1,51 @@
+@use "../abstracts/color";
+
+.guide-section {
+
+    background-color: #FFF;
+
+    .instruction-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media(min-width: 768px) {
+            flex-direction: row;
+        }
+
+        .instruction {
+            display: flex;
+            flex: 1 1 25%;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+
+            .number {
+                z-index: 1;
+                position: absolute;
+                text-align: center;
+                width: 24px;
+                height: 24px;
+                color: #FFF;
+                background-color: color.$primary-color;
+                border-radius: 12px;
+                border: #FFF;
+            }
+
+            .text {
+                width: 100%;
+                height: 70px;
+                border-radius: 15px;
+                margin-left: 15px;
+                background-color: color.$background-color;
+                filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.15));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+
+    }
+
+}

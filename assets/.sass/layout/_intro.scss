@@ -1,0 +1,17 @@
+@use "../abstracts/color";
+
+.intro-section {
+    background-color: color.$background-color;
+    text-align: center;
+    .title {
+        font-size: 1.5rem;
+        margin: 20px 0;        
+    }
+    .subtitle {
+        font-size: 1rem;
+
+    }
+    .button {
+        margin: 20px;
+    }
+}

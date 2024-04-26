@@ -1,7 +1,6 @@
-@use "../abstracts/variables" as *;
+@use "../abstracts/color" as *;
 
 .footer-container {
-    margin-top: 20px;
     padding-top: 20px;
     background-color: $dark-color;
     color: #FFF;

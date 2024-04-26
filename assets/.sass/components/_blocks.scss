@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as *;
+@use "../abstracts/color" as *;
 
 .full-width {
     width: 100%;
@@ -23,12 +23,9 @@
     padding: 20px 0;
 }
 
-
-
 .inset {
     position: relative;
     margin-top: -40px;
-    margin-bottom: -20px;
     border-radius: 40px 40px 0 0;
 }
 
@@ -40,11 +37,6 @@
     gap: 50px;
 }
 
-
-
-
-
-
 .align-left {
     margin-right: auto;
 }
@@ -55,10 +47,6 @@
     max-height: 275px;
     width: 100%;
 }
-
-
-
-
 
 .white {
     background-color: #FFF;
@@ -91,45 +79,3 @@
 
 }
 
-
-
-.intro-section {
-
-    text-align: center;
-
-    .title {
-        font-size: 1.5rem;
-        margin: 20px 0;        
-    }
-
-    .subtitle {
-        font-size: 1rem;
-
-    }
-
-    .button {
-        margin: 20px;
-    }
-
-}
-
-.guide-section {
-
-    .capsule-list {
-        @media(min-width: 768px) {
-            flex-direction: row;
-        }
-    }
-
-
-    .capsule-block {
-        flex: 1 1 25%;
-    }
-
-    .capsule {
-        margin-left: 15px;
-        background-color: $background-color;
-
-    }
-
-}

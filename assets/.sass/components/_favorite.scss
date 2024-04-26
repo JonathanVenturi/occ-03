@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as *;
+@use "../abstracts/color" as *;
 
 .card-favorite {
   position: relative;
@@ -14,22 +14,22 @@
   transition: 1s;
 
   i {
-      position: absolute;
+    position: absolute;
   }
 
   i.fa-solid {
-      background-image: linear-gradient( $gradient-color, $primary-color);
-      background-clip: text;
-      color: transparent;
-      max-height: 0;
-      max-width: 0;
-      transition: 1s;
+    background-image: linear-gradient($gradient-color, $primary-color);
+    background-clip: text;
+    color: transparent;
+    max-height: 0;
+    max-width: 0;
+    transition: 1s;
   }
 }
 
 .card-favorite:hover {
   i.fa-solid {
-      max-height: 2rem;
-      max-width: 2rem;
+    max-height: 2rem;
+    max-width: 2rem;
   }
 }

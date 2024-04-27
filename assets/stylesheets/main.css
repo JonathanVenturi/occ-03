@@ -2,8 +2,14 @@
 *::before,
 *::after {
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -11,93 +17,18 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
 select {
   font-family: inherit;
   font-size: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
 }
 
 * {
@@ -127,14 +58,6 @@ h3 {
 
 .section-title {
   padding: 20px 0;
-}
-
-.menu-section-title {
-  text-transform: uppercase;
-  font-weight: 300;
-  border-bottom: 3px solid;
-  border-color: #99E2D0;
-  max-width: 60px;
 }
 
 i.pad-right {
@@ -168,6 +91,7 @@ i.pad-right {
   position: relative;
   margin-top: -40px;
   border-radius: 40px 40px 0 0;
+  background-color: #F6F6F6;
 }
 
 .side-by-side {
@@ -187,33 +111,6 @@ i.pad-right {
      object-fit: cover;
   max-height: 275px;
   width: 100%;
-}
-
-.white {
-  background-color: #FFF;
-}
-
-.main-bg {
-  background-color: #F6F6F6;
-}
-
-.header-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-height: 275px;
-  width: 100%;
-}
-
-.header-title {
-  position: relative;
-  background-color: #F6F6F6;
-  margin-top: -40px;
-  padding: 20px;
-  border-radius: 40px;
-}
-.header-title h1 {
-  font-size: 1.75rem;
-  margin: 0;
 }
 
 .ribbon {
@@ -546,13 +443,20 @@ i.pad-right {
   background-color: #F6F6F6;
 }
 
-.capsule-list {
+.restaurant-menu {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.capsule {
+.restaurant-menu .section-title {
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 0;
+  border-bottom: 3px solid;
+  border-color: #99E2D0;
+  max-width: 60px;
+}
+.restaurant-menu .item {
   flex-wrap: nowrap;
   overflow: hidden;
   width: 100%;
@@ -565,7 +469,7 @@ i.pad-right {
   background-color: #FFF;
   filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.15));
 }
-.capsule .capsule-content {
+.restaurant-menu .item .item-info {
   display: flex;
   flex: 1 1 auto;
   margin: 15px;
@@ -574,20 +478,20 @@ i.pad-right {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.capsule .capsule-content .capsule-text {
+.restaurant-menu .item .item-info .item-description {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.capsule .capsule-content .capsule-text .title {
+.restaurant-menu .item .item-info .item-description .title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.capsule .capsule-content .capsule-side {
+.restaurant-menu .item .item-info .item-price {
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-.capsule .capsule-tick {
+.restaurant-menu .item .item-tick {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -599,14 +503,8 @@ i.pad-right {
   font-size: 1.2rem;
   transition: 0.5s;
 }
-
-.capsule:hover .capsule-tick {
+.restaurant-menu .item:hover .item-tick {
   margin-right: 0;
-}
-
-.menu-section .capsule {
-  background-color: #FFF;
-  justify-content: space-between;
 }
 
 .footer-container {

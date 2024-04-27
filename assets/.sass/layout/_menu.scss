@@ -1,91 +1,94 @@
 @use "../abstracts/color" as *;
 
-
-
 .restaurant-menu {
 
-}
-
-
-
-
-
-.capsule-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
+
+
+    .section-title {
+        text-transform: uppercase;
+        font-weight: 300;
+        padding-bottom: 0;
+        border-bottom: 3px solid;
+        border-color: $accent-color;
+        max-width: 60px;
+    }
+    
+    
+    
+    
 
 
 
-.capsule {
-    flex-wrap: nowrap;
-    overflow: hidden;
-    width: 100%;
-    max-width: 768px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    border-radius: 15px;
-    background-color: #FFF;
-    filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.15));
-
-
-    .capsule-content {
-        display: flex;
-        flex: 1 1 auto;
-        margin: 15px;
-        justify-content: space-between;
+    .item {
+        flex-wrap: nowrap;
         overflow: hidden;
-        white-space: nowrap;
-
-        text-overflow: ellipsis;
-
-        .capsule-text {
+        width: 100%;
+        max-width: 768px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        border-radius: 15px;
+        background-color: #FFF;
+        filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.15));
+    
+    
+        .item-info {
+            display: flex;
+            flex: 1 1 auto;
+            margin: 15px;
+            justify-content: space-between;
             overflow: hidden;
+            white-space: nowrap;
+    
             text-overflow: ellipsis;
-            .title {
+    
+            .item-description {
                 overflow: hidden;
                 text-overflow: ellipsis;
+                .title {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+    
+            .item-price {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
             }
         }
-
-        .capsule-side {
+    
+    
+        .item-tick {
             display: flex;
-            align-items: flex-end;
             justify-content: center;
+            align-items: center;
+            margin-right: -60px;
+            min-width: 60px;
+            height: 70px;
+            background-color: $accent-color;
+            color: #FFF;
+            font-size: 1.2rem;
+            transition: 0.5s;
         }
+    
+    }
+    
+    
+    .item:hover .item-tick {
+        margin-right: 0;
     }
 
 
-    .capsule-tick {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: -60px;
-        min-width: 60px;
-        height: 70px;
-        background-color: $accent-color;
-        color: #FFF;
-        font-size: 1.2rem;
-        transition: 0.5s;
-    }
+
+
+
+
 
 }
 
 
-.capsule:hover .capsule-tick {
-    margin-right: 0;
-}
-
-
-
-
-
-
-
-.menu-section .capsule {
-    background-color: #FFF;
-    justify-content: space-between;
-}

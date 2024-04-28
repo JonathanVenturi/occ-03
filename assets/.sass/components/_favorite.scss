@@ -1,35 +1,51 @@
-@use "../abstracts/color" as *;
+@use "../abstracts/color";
 
-.card-favorite {
+.favorite {
+  width: 24px;
+  height: 24px;
   position: relative;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-items: center;
-  justify-content: center;
+  cursor: pointer;
 
-  font-weight: 900;
-  font-size: 1.6rem;
-
-  transition: 1s;
-
-  i {
+  .heart-stroke {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 2;
+    transition: 1s;
+    pointer-events: none;
   }
 
-  i.fa-solid {
-    background-image: linear-gradient($gradient-color, $primary-color);
-    background-clip: text;
-    color: transparent;
-    max-height: 0;
-    max-width: 0;
-    transition: 1s;
+  .heart-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform: scale(0);
+    overflow: hidden;
+    background-image: linear-gradient(color.$gradient-color, color.$primary-color);
+    clip-path: url(#heart-clip);
+    transition: 0.5s;
   }
+
 }
 
-.card-favorite:hover {
-  i.fa-solid {
-    max-height: 2rem;
-    max-width: 2rem;
+.favorite:hover {
+  .heart-stroke {
+    stroke: transparent;
   }
+
+  .heart-background {
+    transform: scale(1);
+  }
+
+}
+
+// Hide the actual heart SVG symbol
+
+.svg-defs {
+  position: fixed;
+  width: 0;
+  height: 0;
 }

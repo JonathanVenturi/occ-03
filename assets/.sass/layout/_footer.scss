@@ -1,11 +1,13 @@
+@use "../abstracts/breakpoints";
 @use "../abstracts/color" as *;
+
 
 .footer-container {
     padding-top: 20px;
     background-color: $dark-color;
     color: #FFF;
 
-    @media(min-width:768px) {
+    @media(min-width:breakpoints.$tablet) {
         flex-direction: row-reverse;
     }
 
@@ -14,7 +16,7 @@
         flex-direction: column;
         gap: 20px;
 
-        @media(min-width:768px) {
+        @media(min-width:breakpoints.$tablet) {
             flex-direction: row-reverse;
             gap: 50px;
         }
@@ -33,7 +35,7 @@
         flex-direction: column;
         gap: 0.5rem;
 
-        @media(min-width:768px) {
+        @media(min-width:breakpoints.$tablet) {
             flex-direction: row;
             align-items: center;
             gap: 20px;
